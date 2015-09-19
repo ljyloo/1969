@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment version="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="57" id="KGk-i7-Jjw" customClass="ShowsTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="340" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iGv-DM-1P2">
+                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="QPa-3i-KDp"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nothing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHe-SE-yBd">
+                        <rect key="frame" x="60" y="0.0" width="280" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="280" id="nuk-Ma-TK1"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="JHe-SE-yBd" secondAttribute="trailing" id="57g-FH-UWH"/>
+                    <constraint firstItem="JHe-SE-yBd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Cbc-IC-Eew"/>
+                    <constraint firstAttribute="bottom" secondItem="JHe-SE-yBd" secondAttribute="bottom" constant="-1" id="CxL-Sg-DvQ"/>
+                    <constraint firstAttribute="bottom" secondItem="JHe-SE-yBd" secondAttribute="bottom" constant="-1" id="Nh8-ka-Aor"/>
+                    <constraint firstItem="JHe-SE-yBd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="XHf-7k-ty2"/>
+                    <constraint firstItem="iGv-DM-1P2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="dCn-72-fb5"/>
+                    <constraint firstItem="iGv-DM-1P2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="hhC-V1-mAF"/>
+                    <constraint firstAttribute="trailing" secondItem="JHe-SE-yBd" secondAttribute="trailing" id="pNW-zr-qfa"/>
+                    <constraint firstAttribute="bottom" secondItem="iGv-DM-1P2" secondAttribute="bottom" constant="-1" id="xze-nh-UGG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="208" y="167"/>
+        </tableViewCell>
+    </objects>
+</document>
