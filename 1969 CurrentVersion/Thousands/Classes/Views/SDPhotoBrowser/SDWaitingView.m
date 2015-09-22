@@ -71,7 +71,7 @@
                 CGContextFillPath(ctx);
             }
             break;
-
+            
         default:
             {
                 CGContextSetLineWidth(ctx, 15);
