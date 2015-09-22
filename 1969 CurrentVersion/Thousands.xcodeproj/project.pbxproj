@@ -67,11 +67,11 @@
 		E4679F3A1BA0113300E35132 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E499D0C61BA7BC3100719400 /* SDBrowserImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBrowserImageView.h; sourceTree = "<group>"; };
 		E499D0C71BA7BC3100719400 /* SDBrowserImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBrowserImageView.m; sourceTree = "<group>"; };
-		E499D0C81BA7BC3100719400 /* SDPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowser.h; sourceTree = "<group>"; };
-		E499D0C91BA7BC3100719400 /* SDPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPhotoBrowser.m; sourceTree = "<group>"; };
-		E499D0CA1BA7BC3100719400 /* SDPhotoBrowserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowserConfig.h; sourceTree = "<group>"; };
-		E499D0CB1BA7BC3100719400 /* SDWaitingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWaitingView.h; sourceTree = "<group>"; };
-		E499D0CC1BA7BC3100719400 /* SDWaitingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWaitingView.m; sourceTree = "<group>"; };
+		E499D0C81BA7BC3100719400 /* SDPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDPhotoBrowser.h; path = SDPhotoBrowser/SDPhotoBrowser.h; sourceTree = "<group>"; };
+		E499D0C91BA7BC3100719400 /* SDPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDPhotoBrowser.m; path = SDPhotoBrowser/SDPhotoBrowser.m; sourceTree = "<group>"; };
+		E499D0CA1BA7BC3100719400 /* SDPhotoBrowserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDPhotoBrowserConfig.h; path = SDPhotoBrowser/SDPhotoBrowserConfig.h; sourceTree = "<group>"; };
+		E499D0CB1BA7BC3100719400 /* SDWaitingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDWaitingView.h; path = SDPhotoBrowser/SDWaitingView.h; sourceTree = "<group>"; };
+		E499D0CC1BA7BC3100719400 /* SDWaitingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDWaitingView.m; path = SDPhotoBrowser/SDWaitingView.m; sourceTree = "<group>"; };
 		E499D0CD1BA7BC3100719400 /* SDPhotoGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDPhotoGroup.h; path = ../Views/SDPhotoGroup.h; sourceTree = "<group>"; };
 		E499D0CE1BA7BC3100719400 /* SDPhotoGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDPhotoGroup.m; path = ../Views/SDPhotoGroup.m; sourceTree = "<group>"; };
 		E499D0CF1BA7BC3100719400 /* SDPhotoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPhotoItem.h; sourceTree = "<group>"; };
@@ -131,6 +131,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E42094B61BB0626400E13F96 /* SDPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				E499D0CF1BA7BC3100719400 /* SDPhotoItem.h */,
+				E499D0D01BA7BC3100719400 /* SDPhotoItem.m */,
+				E4A5A6471BA7CD230008000F /* SDPhotoGroup */,
+				E499D0D31BA7BC3100719400 /* SDWebImage */,
+				E499D0C51BA7BC3100719400 /* SDPhotoBrowser */,
+			);
+			name = SDPhoto;
+			sourceTree = "<group>";
+		};
 		E449C10F1BA003F700C3641D = {
 			isa = PBXGroup;
 			children = (
@@ -203,7 +215,6 @@
 			isa = PBXGroup;
 			children = (
 				E4A5A6481BA7CD650008000F /* SDTableViewController */,
-				E4A5A6471BA7CD230008000F /* SDPhotoGroupViewController */,
 				E4679F291BA0113300E35132 /* ShowsTableViewController */,
 			);
 			path = Controllers;
@@ -260,6 +271,11 @@
 		E4679F331BA0113300E35132 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E499D0C81BA7BC3100719400 /* SDPhotoBrowser.h */,
+				E499D0C91BA7BC3100719400 /* SDPhotoBrowser.m */,
+				E499D0CA1BA7BC3100719400 /* SDPhotoBrowserConfig.h */,
+				E499D0CB1BA7BC3100719400 /* SDWaitingView.h */,
+				E499D0CC1BA7BC3100719400 /* SDWaitingView.m */,
 				E4679F341BA0113300E35132 /* ShowsTableViewCell.xib */,
 				E4679F351BA0113300E35132 /* ShowsTableViewController.xib */,
 			);
@@ -286,10 +302,7 @@
 		E499D0C11BA7BBEC00719400 /* Public */ = {
 			isa = PBXGroup;
 			children = (
-				E499D0C51BA7BC3100719400 /* SDPhotoBrowser */,
-				E499D0CF1BA7BC3100719400 /* SDPhotoItem.h */,
-				E499D0D01BA7BC3100719400 /* SDPhotoItem.m */,
-				E499D0D31BA7BC3100719400 /* SDWebImage */,
+				E42094B61BB0626400E13F96 /* SDPhoto */,
 			);
 			name = Public;
 			path = Views;
@@ -300,11 +313,6 @@
 			children = (
 				E499D0C61BA7BC3100719400 /* SDBrowserImageView.h */,
 				E499D0C71BA7BC3100719400 /* SDBrowserImageView.m */,
-				E499D0C81BA7BC3100719400 /* SDPhotoBrowser.h */,
-				E499D0C91BA7BC3100719400 /* SDPhotoBrowser.m */,
-				E499D0CA1BA7BC3100719400 /* SDPhotoBrowserConfig.h */,
-				E499D0CB1BA7BC3100719400 /* SDWaitingView.h */,
-				E499D0CC1BA7BC3100719400 /* SDWaitingView.m */,
 			);
 			path = SDPhotoBrowser;
 			sourceTree = "<group>";
@@ -349,13 +357,14 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
-		E4A5A6471BA7CD230008000F /* SDPhotoGroupViewController */ = {
+		E4A5A6471BA7CD230008000F /* SDPhotoGroup */ = {
 			isa = PBXGroup;
 			children = (
 				E499D0CD1BA7BC3100719400 /* SDPhotoGroup.h */,
 				E499D0CE1BA7BC3100719400 /* SDPhotoGroup.m */,
 			);
-			name = SDPhotoGroupViewController;
+			name = SDPhotoGroup;
+			path = ../Controllers;
 			sourceTree = "<group>";
 		};
 		E4A5A6481BA7CD650008000F /* SDTableViewController */ = {

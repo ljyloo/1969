@@ -10,7 +10,6 @@
 #import "UIImageView+WebCache.h"
 #import "SDBrowserImageView.h"
 
- 
 //  ============在这里方便配置样式相关设置===========
 
 //                      ||
@@ -23,7 +22,7 @@
 
 //  =============================================
 
-@implementation SDPhotoBrowser 
+@implementation SDPhotoBrowser
 {
     UIScrollView *_scrollView;
     BOOL _hasShowedFistView;
@@ -84,6 +83,24 @@
 //    [self addSubview:saveButton];
 }
 
+- (void)saveImageTip:(UILongPressGestureRecognizer *)gesture{
+    if (gesture.state != UIGestureRecognizerStateBegan) {
+        return;
+    }
+    UIAlertView *saveAlert = [[UIAlertView alloc]initWithTitle:@"提示"
+                                                       message:@"是否保存图片"
+                                                      delegate:self
+                                             cancelButtonTitle:@"取消"
+                                             otherButtonTitles:@"确定", nil];
+    [saveAlert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 1) {
+        [self saveImage];
+    }
+}
+
 - (void)saveImage
 {
     int index = _scrollView.contentOffset.x / _scrollView.bounds.size.width;
@@ -141,10 +158,13 @@
         // 双击放大图片
         UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageViewDoubleTaped:)];
         doubleTap.numberOfTapsRequired = 2;
-        [self addGestureRecognizer:doubleTap];
+//        [self addGestureRecognizer:doubleTap];
+        
+        UILongPressGestureRecognizer *longTap = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(saveImageTip:)];
         
         [singleTap requireGestureRecognizerToFail:doubleTap];
         
+        [imageView addGestureRecognizer:longTap];
         [imageView addGestureRecognizer:singleTap];
         [imageView addGestureRecognizer:doubleTap];
         [_scrollView addSubview:imageView];
@@ -153,6 +173,7 @@
     [self setupImageOfImageViewForIndex:self.currentImageIndex];
     
 }
+
 
 // 加载图片
 - (void)setupImageOfImageViewForIndex:(NSInteger)index

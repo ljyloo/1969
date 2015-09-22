@@ -24,7 +24,7 @@
 @end
 
 
-@interface SDPhotoBrowser : UIView <UIScrollViewDelegate>
+@interface SDPhotoBrowser : UIView <UIScrollViewDelegate,UIAlertViewDelegate>
 
 @property (nonatomic, weak) UIView *sourceImagesContainerView;
 @property (nonatomic, assign) int currentImageIndex;
